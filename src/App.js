@@ -1,4 +1,4 @@
-import ask from "./src/getJSON.js"
+import ask from "./getJSON.js"
 
 Vue.component('item-pop',{
 	template:'<li class="nav-item" >\
