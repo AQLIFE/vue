@@ -46,7 +46,7 @@ Vue.component('lk', {
 	template:'<a class="card m-1 text-dark" style="max-width:360px;" target="__blank" >\
 				<div class="row">\
 				  <div class="col-4 row align-items-center">\
-					<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>\
+					<img src="./IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>\
 				  </div>\
 				  <div class="col-8">\
 					<div class="card-body">\
@@ -85,7 +85,7 @@ export const Link ={
 
 export const Action= {
 	template:'<div class="card mx-auto col-lg-4 col-md-12">\
-	<img src="../IMG/Head portrait.jpg" alt="头像" class="card-img-top">\
+	<img src="./IMG/Head portrait.jpg" alt="头像" class="card-img-top">\
 	<div class="card-body text-center"  >\
 		<h5>胡某</h5>\
 		<h6>\
