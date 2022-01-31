@@ -12,7 +12,7 @@ window.onload=function(){
 			ObjTime[1].innerText= '  '+Date();
 	},1000);
 }
-
+/* 
 $(
 	()=>{
 		$('a.nav-link').on('click',function(){
@@ -26,5 +26,5 @@ $(
 		})
 		// console.log('JQ 已加载')
 	}
-)
+) */
 
