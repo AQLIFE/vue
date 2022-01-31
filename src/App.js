@@ -1,4 +1,4 @@
-import ask from "../src/getJSON.js"
+import ask from "./src/getJSON.js"
 
 Vue.component('item-pop',{
 	template:'<li class="nav-item" >\
@@ -27,7 +27,7 @@ export const Nav = {
 
 // 第一步: 创建对应组件对象
 export const AQLIFE = {
-	template:'<img v-cloak class="col-12 img-thumbnail mx-auto" src="../IMG/RainierMilkyWay_1920x1080.jpg" alt="加载失败" crossorigin="anonymous"/>',
+	template:'<img v-cloak class="col-12 img-thumbnail mx-auto" src="./IMG/RainierMilkyWay_1920x1080.jpg" alt="加载失败"/>',
 	methods:{  },	//组件的方法集合
 	props:	{  },	//组件的属性集合
 	data()	{ return {text:"这是 AQ LIFE"}; }	//组件的基础方法
