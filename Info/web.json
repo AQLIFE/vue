@@ -1,0 +1,31 @@
+{
+    "status" : 200 ,          
+    "msg"    : "info",
+    "data"   :{
+        "nav":[
+            "aqlife","code","link","action"
+        ],
+        "link":{
+            "search": [
+                {"id":1,"title":"Bing","text":"一个国内最好用的搜索引擎","link":"https://cn.bing.com"},
+                {"id":2,"title":"Baidu","text":"搜索引擎里的备胎","link":"https://www.baidu.com"},
+                {"id":3,"title":"Google","text":"世界最大搜索引擎","link":"https://www.google.com"}
+            ],
+            "programming":[
+                {"id":1,"title":"菜鸟教程","text":"\"学的不仅是技术，更是梦想！\"该站致力于推广各种编程语言技术","link":"https://www.runoob.com"},
+                {"id":2,"title":"MDN","text":"MDN Web Docs 是一个提供 Web 技术和促进 Web 技术软件的不断发展的学习平台","link":"https://developer.mozilla.org/zh-CN/"},
+                {"id":3,"title":"W3school","text":"在 W3School，你可以找到你所需要的所有的网站建设教程","link":"https://www.w3school.com.cn"}
+            ],
+            "web framework":[
+                {"id":1,"title":"Vue","text":"渐进式JavaScript 框架","link":"https://cn.vuejs.org/"},
+                {"id":2,"title":"React","text":"用于构建用户界面的 JavaScript 库","link":"https://react.docschina.org/"}
+            ],
+            "web UI":[
+                {"id":1,"title":"Bootstrap","text":"简洁、直观、强悍的前端样式框架，让web开发更迅速、简单","link":"https://www.bootcss.com/"}
+            ],
+            "backend":[
+                {"id":1,"title":"Node.js","text":"Node.js 是一个开源和跨平台的 JavaScript 运行时环境。 它几乎是任何类型项目的流行工具！","link":"http://nodejs.cn/"}
+            ]
+        }
+    }
+}

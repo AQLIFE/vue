@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+		<script src="https://unpkg.com/vue/dist/vue.js" integrity="sha384-t1tHLsbM7bYMJCXlhr0//00jSs7ZhsAhxgm191xFsyzvieTMCbUWKMhFg9I6ci8q" crossorigin="anonymous"></script>				<!--这里引入基础的 Vue 语法支持-->
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js" integrity="sha384-3F7C20ADlheYMv2G1MxHE9ITtKVNgNhsq259OmcCnc4QsJmQLnUXLeuiqBSDWiG3" crossorigin="anonymous"></script> <!--这里引入 vue-router 语法支持-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"><!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		
+
+		<script src="./include/jquery-3.6.0.js"></script>
+		<link rel="stylesheet" href="./CSS/default.css"/>
+		<link rel="stylesheet" href="./CSS/main.css"/>
+		<link rel="shortcut icon" href="./IMG/Tlogo.png" type="image/x-icon">
+		<title>AQLIFE : 胡某的一亩三分地 </title>
+	</head>
+	<body class="bg-light">
+		<div id="app" class="col-12">
+			<header class="container mx-auto mt-2 p-5 text-dark rounded text-center">
+				<h1>欢迎来到 AQLIFE </h1>
+				<p>现在还在开荒测试中,敬请期待...</p>
+			</header>
+
+			<nav-pop></nav-pop>
+
+			<main class="container my-5">
+				<transition mode="out-in">
+					<router-view></router-view>
+				</transition>
+				
+				<div id="catalog">
+					<router-view name="catalog"></router-view>
+				</div>
+			</main>
+
+			<footer class="row bg-dark text-light p-5">
+				<div>
+					<span>最近更新时间:</span>
+					<span id="uptm"></span>
+				</div>
+				<div>
+					<span>现在时间:</span>
+					<span id="time"></span>
+				</div>
+			</footer>
+		</div>
+		<script src="./src/Tools.js"></script>
+		<script async="true" type="module" src="./src/main.js"></script>
+		
+		<!-- <script src="../JS/getDemo.js"></script> -->
+	</body>
+</html>

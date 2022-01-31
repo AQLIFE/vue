@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>AQLIFE : Vue-router 测试 </title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>				<!--这里引入基础的 Vue 语法支持-->
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> <!--这里引入 vue-router 语法支持-->
+		<link rel="stylesheet" href="../CSS/default.css"/>
+		<link rel="stylesheet" href="../CSS/main.css"/>
+		<link rel="shortcut icon" href="../IMG/Tlogo.png" type="image/x-icon">
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+	</head>
+    <body>
+        <div id="app">
+            <ul>
+                <li><a href="#/aqlife"  aria-current="page" rel="noopener noreferrer">AQLIFE</a></li>
+                <li><a href="#/code"    aria-current="page" rel="noopener noreferrer">Code</a></li>
+                <li><a href="#/link"    aria-current="page" rel="noopener noreferrer">Link</a></li>
+                <li><a href="#/action"  aria-current="page" rel="noopener noreferrer">Action</a></li>
+            </ul>
+            <router-view class="text-dark"></router-view>
+
+
+			<!-- <div class="card mx-auto">
+				<img src="../IMG/Head portrait.jpg" alt="头像" class="card-img-top">
+				<div class="card-body text-center"  >
+					<h5>胡某</h5>
+					<h6>
+						<span class="badge bg-info">C#</span>
+						<span class="badge bg-info">C</span>
+						<span class="badge bg-info">C++</span>
+						<span class="badge bg-info">JS</span>
+						<span class="badge bg-info">PHP</span>
+						<span class="badge bg-info">Python</span>
+					</h6>
+					<p>
+						爱好摸鱼...
+					</p>
+					<a class="btn bg-success text-light" href="mailto:209879664@qq.com">点击此处通过邮箱联系我</a>
+				</div>
+			</div> -->
+
+			<div class="card mb-3 col-lg-4">
+				<div class="row g-0">
+					<div class="col-lg-1">
+						<img src="../IMG/Tlogo.png" alt="加载失败"/>
+					</div>
+					<div clas="col-lg-3">
+						<div class="card-body">
+							<h5 class="card-title">Bing 搜索引擎</h5>
+							<p class="card-text">test</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+		<div class="card col-12 mx-auto">
+			<div class="card-header ">ts</div>
+			<div class="card-body row g-0">
+
+				<button class="card m-2" style="max-width:360px;">
+					<div class="row">
+					  <div class="col-4 row align-items-center">
+						<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>
+					  </div>
+					  <div class="col-8">
+						<div class="card-body">
+						  <h5 class="card-title">{{ title }}</h5>
+						  <p class="card-text">{{ text }}</p>
+						</div>
+					  </div>
+					</div>
+				</button>
+
+				<button class="card m-2" style="max-width:360px;">
+					<div class="row">
+					  <div class="col-4 row align-items-center">
+						<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>
+					  </div>
+					  <div class="col-8">
+						<div class="card-body">
+						  <h5 class="card-title">{{ title }}</h5>
+						  <p class="card-text">{{ text }}</p>
+						</div>
+					  </div>
+					</div>
+				</button>
+
+				<button class="card m-2" style="max-width:360px;">
+					<div class="row">
+					  <div class="col-4 row align-items-center">
+						<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>
+					  </div>
+					  <div class="col-8">
+						<div class="card-body">
+						  <h5 class="card-title">{{ title }}</h5>
+						  <p class="card-text">{{ text }}</p>
+						</div>
+					  </div>
+					</div>
+				</button>
+
+
+				<button class="card m-2" style="max-width:360px;">
+					<div class="row">
+					  <div class="col-4 row align-items-center">
+						<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>
+					  </div>
+					  <div class="col-8">
+						<div class="card-body">
+						  <h5 class="card-title">{{ title }}</h5>
+						  <p class="card-text">{{ text }}</p>
+						</div>
+					  </div>
+					</div>
+				</button>
+
+
+				<button class="card m-2" style="max-width:360px;">
+					<div class="row">
+					  <div class="col-4 row align-items-center">
+						<img src="../IMG/Tlogo.png" class="img-fluid rounded" alt="..."/>
+					  </div>
+					  <div class="col-8">
+						<div class="card-body">
+						  <h5 class="card-title">{{ title }}</h5>
+						  <p class="card-text">{{ text }}</p>
+						</div>
+					  </div>
+					</div>
+				</button>
+			</div>
+		</div>
+        <script src="../JS/main.js"></script>
+    </body>
+</html>

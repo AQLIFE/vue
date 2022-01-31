@@ -1,0 +1,13 @@
+{
+    "status":"success",
+    "info": {
+        "search": [
+            {"id":1,"title":"Bing","text":"一个国内最好用的搜索引擎","link":"https://cn.bing.com"},
+            {"id":2,"title":"Baidu","text":"搜索引擎里的备胎","link":"https://www.baidu.com"}
+        ],
+        "tools":[
+            {"id":3,"title":"菜鸟教程","text":"一个做的比较好的教程平台","link":"https://www.runoob.com"},
+            {"id":2,"title":"MDN","text":"前端三剑客工具语法大全","link":"https://developer.mozilla.org/zh-CN/"}
+        ]
+    }
+}

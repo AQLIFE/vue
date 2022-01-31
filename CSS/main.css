@@ -1,0 +1,35 @@
+body{
+    overflow-x: hidden;
+    /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* 隐藏 滚动条 */
+
+#error{
+    min-height: 350px;
+    line-height: 175px;
+    font-size: 3rem;
+}
+
+a > .row{
+    height: 100%;
+}
+#pop-head{
+    line-height: 500%;
+    font-size: 3rem;
+}
+
+#pop-text{
+    min-height: 550px;;
+}
+
+@media (width < 900px){
+    main{
+        max-height:300px;
+        overflow: hidden;
+    }
+}
