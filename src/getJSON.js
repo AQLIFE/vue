@@ -1,5 +1,5 @@
 var ask = {
-    url : '../Info/web.json',
+    url : './Info/web.json',
     reta :Object,
     AjaxObj: window.XMLHttpRequest?(new XMLHttpRequest()):(new ActiveXObject('Microsoft.XMLHTTP')),
     getJson:()=>{
