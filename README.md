@@ -9,4 +9,4 @@
 - LINK   : 收藏链接(分享页)
 - ACTION : 关于(信息)页
 
-> 有事可通过 ACTION 页面联系本人
+> 有事可通过 [ACTION](https://aqlife.github.io/vue/#/action) 页面联系本人
