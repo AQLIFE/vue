@@ -1,4 +1,4 @@
-body{background-color: rgba(0, 0, 0, 0.9);}
+/* body{background-color: rgba(0, 0, 0, 0.9);}
 
 #app{
     display: flex;
@@ -6,7 +6,7 @@ body{background-color: rgba(0, 0, 0, 0.9);}
     flex-wrap: wrap;
     width:90vw;
     margin:5vh auto;
-}
+} */
 
 button{
     position: relative;
@@ -41,11 +41,12 @@ button::after{
 }
 
 button:hover::after,button:hover::before{
-    animation: tds 1s forwards;
+    animation: tds 1s;
+    animation-fill-mode:forwards;
 }
 
 
 @keyframes tds{
-    from{width:10%;height:100%;}
+    from{width:10%;height:30%;}
     to{width: 100%;height:100%;}
 }

@@ -5,12 +5,45 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Get JSON : 测试</title>
-		<script type="module">
-			import reta from "../JS/getJSON.js"
-		</script>
+		<script src="https://unpkg.com/vue/dist/vue.js" integrity="sha384-t1tHLsbM7bYMJCXlhr0//00jSs7ZhsAhxgm191xFsyzvieTMCbUWKMhFg9I6ci8q" crossorigin="anonymous"></script>				<!--这里引入基础的 Vue 语法支持-->
+		<style>
+			body{height:100vh;}
+			#line{
+				margin:auto;
+				width: 0px;
+				height: 100vh;
+				border-radius: 24px;
+				border: 1px solid navy;
+				position: relative;
+				background-color: navy;
+			}
+
+			.node{ 
+				overflow: visible;position:absolute;
+				width: 1vw;height:1vw;
+				border-radius: 100%;
+				background-color: rgba(0,0,128,1);
+				border:1px solid white;
+				outline: 1px solid navy;
+				margin-left:-0.60vw;
+			}
+
+			[v-cloak]{display: none;}
+
+			#btn{margin: auto;}
+			p{margin:auto;width:300px;text-align:center;height:300px;line-height:300px;}
+		</style>
+		<link rel="stylesheet" href="../CSS/button.css">
 	</head>
 	<body>
-		<pre>获得 json </pre>
+
+		<div id="app">
+			<p>自设计时间轴</p>
+			<button @click="ClickShow" id="btn"> Toggle </button>
+			<time-line id="line" v-cloak v-show="isShowDone" :Info="list"></time-line>
+		</div>
+		
+		<!-- <pre>获得 json </pre> -->
 		<!-- <div class="container">
 					<div id="pop-head" class="bg-info rounded mt-2  px-2 text-center">文章标题</div>
 					<div id="pop-text" class="bg-light text0dark mt-2 px-2 rounded">
@@ -30,5 +63,58 @@
 						内容文章内容文章内容文章内容文章内容文章内容文章内
 					</div>
 				</div> -->
+				<script>
+					
+
+					Vue.component('time-line',{
+						template:'<div>\
+									<div v-cloak class="node" v-for="item of list" :key="item" :id="item">\
+									</div>\
+								</div>',
+						props:{'Info':Array},
+						data(){
+							return {list:this.Info}
+						}
+					})
+
+					var vm = new Vue({
+						el:'#app',
+						data:{
+							'list':[0,1,2,3,4,5,6,7,8,9],
+							'isShowDone':true,
+							ClickShow:()=>{
+								this.isShowDone=!this.isShowDone;
+								console.log('Clicked',this.isShowDone)
+							}
+						}
+					})
+
+					var ls = document.querySelectorAll('.node');
+					var i = 1,flah = '0';
+
+					// console.log( document.getElementsByClassName('node'))
+					ls.forEach(element => {
+						element.style.top = (300*i > flah?300*i:flah)+'px';
+						i++;
+					});
+					document.getElementById('line').style.height = 300*i+"px";
+
+
+
+					//随机颜色生成器
+					// Math.floor(Math.random() * 256);
+					function RandRGBA( isTransparent = true ){
+						// IsTran
+						// - true : 透明
+						// - false: 不透明 
+						let red    = Math.floor(Math.random() * 256);
+						let blue   = Math.floor(Math.random() * 256);
+						let green  = Math.floor(Math.random() * 256);
+						let Tran   = isTransparent?Math.random(): 1 ;
+						let basics = !isTransparent?'RGB('+ red +','+ blue +','+ green +')':'RGB('+ red +','+ blue +','+ green + ','+ Tran +')';
+						return basics;
+					}
+				</script>
+
 	</body>
 </html>

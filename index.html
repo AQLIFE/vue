@@ -26,13 +26,16 @@
 			<nav-pop></nav-pop>
 
 			<main class="container my-5">
-				<transition mode="out-in">
-					<router-view></router-view>
-				</transition>
 				
 				<div id="catalog">
 					<router-view name="catalog"></router-view>
 				</div>
+
+				<transition mode="out-in">
+					<div id="master">
+						<router-view></router-view>
+					</div>
+				</transition>
 			</main>
 
 			<footer class="row bg-dark text-light p-5">
