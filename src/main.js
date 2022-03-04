@@ -24,3 +24,6 @@ var vm = new Vue({
 	router
 	// template:'<nav-pop/>'
 })
+
+
+// Vue 程序入口文件
